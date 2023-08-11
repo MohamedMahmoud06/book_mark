@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Mark</title>
+    <link rel="icon" href="./images/bookmark.png" />
+    <link rel="stylesheet" href="webfonts/fa-brands-400.ttf" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="maintext position-relative">
+        <h1 class="text-center">Bookmarker</h1>
+        <div class="test"></div>
+      </div>
+      <br />
+      <br />
+      <hr class="dashed-line" />
+      <div class="text d-flex justify-content-center">
+        <i class="fa-solid fa-book-bookmark"></i>
+        <h2>Bookmark your favorite sites</h2>
+        <i class="fa-solid fa-book-bookmark"></i>
+      </div>
+      <form class="d-flex flex-column">
+        <label for="bookMarkname" class="py-3">
+          <i class="fa-solid fa-book-bookmark"></i> Site Name
+        </label>
+        <input
+          type="text"
+          placeholder="Bookmark Name"
+          class="form-control is-invalid"
+          id="bookMarkname"
+          onkeyup="nameregex()"
+        />
+
+        <label for="bookMarkURL" class="py-3">
+          <i class="fa-solid fa-link pe-2"></i> Site URL
+        </label>
+        <input
+          type="text"
+          placeholder="Website URL"
+          class="form-control is-invalid"
+          id="bookMarkURL"
+          onkeyup="urlregex()"
+        />
+        <br />
+        <button type="button" class="btn1  btn btn-warning align-self-center px-5 d-block" id="btn" onclick="addProduct()">
+          subbmit
+        </button>
+        <div class="val text-center d-none " id="val" >
+            <h3>Site Name or Url is not valid, Please follow the rules below :</h3>
+            <p><i class="fa-solid fa-arrow-alt-circle-right" ></i> Site name must contain at least 3 characters</p>
+                  <p><i class="fa-solid fa-arrow-alt-circle-right" ></i> Site URL must be a valid one </p>
+            </div>
+      </form>
+      <hr class="dashed-line my-3" />
+      <table class="table table-striped text-center">
+        <thead>
+          <th>index</th>
+          <th>Website Name</th>
+          <th>Visite</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

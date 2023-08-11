@@ -1,0 +1,48 @@
+.dashed-line {
+  border: 2px dotted rgb(0, 0, 0);
+}
+h1 {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+  isolation: isolate;
+
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  height: 25%;
+  bottom: 0px;
+  background-color: #fec260;
+  transition: all 0.5s;
+  z-index: -1;
+}
+h1:hover::before {
+  height: 40%;
+  bottom: 0px;
+}
+body {
+  background-color: #f7ecde;
+}
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+.btn1 {
+  background-color: #e13d10;
+  transition: all 0.5;
+  color: #fff;
+}
+.btn1:hover {
+  background-color: #bb4120;
+  color: #fff;
+}
+.val{
+  position: relative;
+  display: block;
+  z-index: 5621551;
+}
